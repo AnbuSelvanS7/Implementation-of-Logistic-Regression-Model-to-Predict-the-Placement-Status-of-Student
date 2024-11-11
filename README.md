@@ -101,7 +101,7 @@ clf.fit(x_train,y_train)
 ![Screenshot 2024-10-16 095604](https://github.com/user-attachments/assets/dfb4f0ef-4d3a-4d42-9aef-97fb7e3d1d1d)
 
 ## Model Evaluation:
-
+```
 ypred=clf.predict(x_test)
 print(ypred)
 from sklearn.metrics import confusion_matrix,accuracy_score
@@ -109,7 +109,7 @@ cf=confusion_matrix(y_test,ypred)
 print(cf)
 accuracy=accuracy_score(y_test,ypred)
 print(accuracy*100)
-
+```
 
 ## Output :
 ![Screenshot 2024-10-16 095740](https://github.com/user-attachments/assets/0465fa3d-423e-4df1-8704-884c3cb27317)
