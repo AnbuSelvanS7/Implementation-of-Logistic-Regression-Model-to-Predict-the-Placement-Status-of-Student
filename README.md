@@ -52,15 +52,16 @@ a.info()
 ![image](https://github.com/user-attachments/assets/9ad47c29-1ea9-4738-a858-c26db8ed6da9)
 
 ## Drop unnecessary columns
-
+```
 a=a.drop(['sl_no'],axis=1)
 a
+```
 
 ## Output:
 ![Screenshot 2024-10-16 094934](https://github.com/user-attachments/assets/689b4970-82a2-48cb-80ad-f0f8742c1869)
 
 ## Encoding Categorical Variables:
-
+```
 a['gender']=a['gender'].astype('category')
 a['ssc_b']=a['ssc_b'].astype('category')
 a['hsc_b']=a['hsc_b'].astype('category')
@@ -80,23 +81,23 @@ a['workex']=a['workex'].cat.codes
 a['specialisation']=a['specialisation'].cat.codes
 a['status']=a['status'].cat.codes
 a.info()
-
+```
 ## Output:
 ![Screenshot 2024-10-16 095131](https://github.com/user-attachments/assets/492de0b1-f138-4ece-993d-fdaf91dd1105)
 ![image](https://github.com/user-attachments/assets/c6a67e9c-c407-4c35-a9f6-196cccea0570)
 
 ## Splitting Data:
-
+```
 x=a.iloc[:,:-1].values
 y=a.iloc[:,-1].values
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=1)
-
+```
 
 ## Logistic Regression Model:
-
+```
 clf=LogisticRegression()
 clf.fit(x_train,y_train)
-
+```
 ## Output:
 ![Screenshot 2024-10-16 095604](https://github.com/user-attachments/assets/dfb4f0ef-4d3a-4d42-9aef-97fb7e3d1d1d)
 
